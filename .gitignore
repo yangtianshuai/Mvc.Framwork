@@ -1,0 +1,11 @@
+
+*.ide
+*.ide-shm
+*.lock
+*.ide-wal
+MVC.Framework/obj/Debug/Mvc.Framework.csproj.CopyComplete
+MVC.Framework/obj/Debug/MVC.Framework.csproj.FileListAbsolute.txt
+Web/obj/Debug/build.force
+Web/obj/Debug/MVC1.csproj.FileListAbsolute.txt
+Web/obj/Debug/Web.csproj.FileListAbsolute.txt
+Web/obj/Debug/WebApplication1.csproj.FileListAbsolute.txt

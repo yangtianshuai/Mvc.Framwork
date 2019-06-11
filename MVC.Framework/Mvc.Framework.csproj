@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8ABFFC37-CAAF-4789-B7B1-FD264371CCB7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Mvc.Framework</RootNamespace>
+    <AssemblyName>Mvc.Framework</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\OutPut\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>.\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\ControllerTypes.cs" />
+    <Compile Include="Handler\MvcRouteHandler.cs" />
+    <Compile Include="Handler\PageRouteHandler.cs" />
+    <Compile Include="ReflectInvoker.cs" />
+    <Compile Include="Result\ActionResult.cs" />
+    <Compile Include="Controller\Controller.cs" />
+    <Compile Include="Controller\ControllerActionInvoker.cs" />
+    <Compile Include="Controller\ControllerBase.cs" />
+    <Compile Include="Controller\DefaultControllerFactory.cs" />
+    <Compile Include="Context\ControllerContext.cs" />
+    <Compile Include="Controller\ControllerBuilder.cs" />
+    <Compile Include="Controller\IActionInvoker.cs" />
+    <Compile Include="Controller\IControllerFactory.cs" />
+    <Compile Include="Context\HttpRequestContext.cs" />
+    <Compile Include="HttpVerb.cs" />
+    <Compile Include="Handler\MvcHandler.cs" />
+    <Compile Include="Result\ContentResult.cs" />
+    <Compile Include="Controller\IController.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Context\RequestBase.cs" />
+    <Compile Include="Result\ViewResult.cs" />
+    <Compile Include="Result\JsonResult.cs" />
+    <Compile Include="Handler\IRouteHandler.cs" />
+    <Compile Include="Routing\Route.cs" />
+    <Compile Include="Routing\RouteBase.cs" />
+    <Compile Include="Routing\RouteCollection.cs" />
+    <Compile Include="Routing\RouteData.cs" />
+    <Compile Include="Routing\RouteTable.cs" />
+    <Compile Include="Routing\UrlRoutingModule.cs" />
+    <Compile Include="View\ViewData.cs" />
+    <Compile Include="View\ViewPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
